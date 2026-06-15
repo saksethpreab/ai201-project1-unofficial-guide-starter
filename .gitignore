@@ -1,5 +1,7 @@
 # API keys — never commit these
 .env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
@@ -16,5 +18,22 @@ env/
 chroma_db/
 chroma/
 
+# Source corpus — must stay local, never redistributed (license compliance)
+documents/*
+!documents/.gitkeep
+
+# Query interface leftovers (Gradio/Streamlit)
+.gradio/
+flagged/
+*.log
+
+# IDE / editors
+.vscode/
+.idea/
+
 # macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
